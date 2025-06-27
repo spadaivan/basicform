@@ -29,3 +29,51 @@ form, header, footer {
     padding: 2rem;
     width: 60%;
 }
+
+header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+form h1 {
+    margin-bottom: 0.5rem;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45A049;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    font-size: 0.7rem;
+    color: #666;
+}
