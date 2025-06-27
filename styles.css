@@ -12,6 +12,14 @@ body {
     height: 100vh;
 }
 
+a {
+    color: white;
+}
+
+.bottom {
+    margin: 0;
+}
+
 .left-side {
     width: 40%;
     position: relative;
@@ -19,11 +27,23 @@ body {
     height: 100vh;
 }
 
-.left-side img {
+.bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 
+}
+
+.overlay-img{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: none;
 }
 
 .left-side footer {
@@ -36,8 +56,9 @@ body {
     font-size: 0.8rem;
 }
 
-form, header, footer {
+form, header, footer, .bottom {
     width: 100%;
+    border-radius: 20px;
 }
 
 .right-side {
@@ -46,6 +67,35 @@ form, header, footer {
     justify-content: space-between;
     padding: 2rem;
     width: 60%;
+    background-color: #F4F4F4;
+    
+}
+
+.row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.input-group{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:focus {
+    border: 2px solid blue;
+    box-shadow: blue;
 }
 
 header {
@@ -59,16 +109,31 @@ form {
     flex-direction: column;
     gap: 1.5rem;
     flex-grow: 1;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+}
+
+.button, .footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #596D48;
+    font-weight: 700;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 form h1 {
     margin-bottom: 0.5rem;
 }
 
-form div {
-    display: flex;
-    flex-direction: column;
-}
 
 input {
     padding: 0.5rem;
@@ -79,7 +144,7 @@ input {
 button {
     padding: 0.5rem;
     font-size: 1rem;
-    background-color: #4CAF50;
+    background-color: #596D48;
     color: white;
     border: none;
     cursor: pointer;
